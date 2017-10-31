@@ -1,0 +1,11 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "Test todo app",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Aamar Khan",
+  "license": "ISC"
+}
