@@ -1,0 +1,13 @@
+// it might be said:
+{
+  "presets": [
+    "react",
+    ["env", {
+      "targets": {
+        "browsers": "last 2 versions"
+      },
+      "loose": true,
+      "modules": false
+    }]
+  ]
+}
