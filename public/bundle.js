@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10338,21 +10338,19 @@ var _this = this;
 // it might be said
 
 
-// This should add the value on the page
 var Add = function Add() {
+  var $doneCont = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.done_cont');
   var elem = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])(_this).parents('li');
-  $done_cont.append(elem);
-  console.log('tdAdd');
+  $doneCont.append(elem);
 };
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Add);
+/* harmony default export */ __webpack_exports__["a"] = (Add);
 
 /***/ }),
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Add__ = __webpack_require__(1);
@@ -10362,49 +10360,86 @@ var _this = this;
 
 
 
-// Variables
-var $todoCont = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.todo_cont');
-var $doneCont = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.done_cont');
-var $todoAdd = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.todo_add');
-var $todoInput = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.todo_input');
-
-// This should add the value on the page
-var tdAdd = function tdAdd() {
-  var elem = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])(_this).parents('li');
-  $doneCont.append(elem);
-};
-
-// This remove the value on the page
+// This removes the value on the page
 // if this is an arrow function, the this keyword is not the event
-var tdRemove = function tdRemove() {
+var Remove = function Remove() {
   var elem = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])(_this).parents('li');
   elem.remove();
-  tdAdd();
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__Add__["a" /* default */])();
 };
 
-var tdClearReturnFocus = function tdClearReturnFocus() {
+/* unused harmony default export */ var _unused_webpack_default_export = (Remove);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ReturnFocus__ = __webpack_require__(4);
+// it might be said:
+
+
+
+
+// it might be said
+var Render = function Render() {
+  var $todoCont = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.todo_cont');
+  var $todoInputVal = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.todo_input').val() ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.todo_input').val() : 'empty';
+  console.log($todoInputVal);
+  $todoCont.append('<li>' + $todoInputVal + '<span class="remove glyphicon glyphicon-remove" aria-hidden="true"></span></li>');
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ReturnFocus__["a" /* default */])();
+};
+
+/* unused harmony default export */ var _unused_webpack_default_export = (Render);
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+// it might be said:
+
+
+
+var ReturnFocus = function ReturnFocus() {
+  var $todoInput = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.todo_input');
   $todoInput.val('').focus();
 };
 
-// it might be said
-var tdRender = function tdRender() {
-  var $todoInputVal = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.todo_input').val() ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.todo_input').val() : 'empty';
-  $todoCont.append('<li>' + $todoInputVal + '<span class="remove glyphicon glyphicon-remove" aria-hidden="true"></span></li>');
-  tdClearReturnFocus();
-};
+/* harmony default export */ __webpack_exports__["a"] = (ReturnFocus);
 
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Add__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Remove__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Render__ = __webpack_require__(3);
+// it might be said:
+
+
+
+
+
+// Variables
+var $todoAdd = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_jquery__["$"])('.todo_add');
 // bind events
-var init = function init() {
-  $todoAdd.on('click', tdRender);
-  $todoCont.on('click', '.remove', tdRemove);
-};
-
-init();
+$todoAdd.on('click', function () {
+  console.log('tests');
+});
 
 // it might be said
 // TODOS
-// - clicking on the 'x' removes the item from the list - done
-// - clicking on the 'x' adds that item to the new list - done
+// - clicking on the 'x' removes the item from the list
+// - clicking on the 'x' adds that item to the new list
 // - clicking on the 'x' removes that from the array
 // - make a new array for the 'done' list - done
 
