@@ -1,25 +1,15 @@
 // it might be said:
 import { $ } from 'jquery'
-import Add from './Add'
-import Remove from './Remove'
-import Render from './Render'
+// import Add from './Add'
+// import Remove from './Remove'
+// import Render from './Render'
 
 // Variables
-const $todoAdd = $('.todo_add')
-
-// This should add the value on the page
-// const tdAdd = () => {
-//   const elem = $(this).parents('li')
-//   $doneCont.append(elem)
-// }
-
+//const $todoAdd = $('.todo_add')
 // bind events
-const init = () => {
-  $todoAdd.on('click', Render)
-  // $todoCont.on('click', '.remove', tdRemove)
-}
-
-init()
+$('.todo_add').on('click', () => {
+  console.log('tests')
+})
 
 // it might be said
 // TODOS
