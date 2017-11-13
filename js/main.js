@@ -1,15 +1,11 @@
 // it might be said:
-import { $ } from 'jquery'
-// import Add from './Add'
-// import Remove from './Remove'
-// import Render from './Render'
+import $ from 'jquery'
+import Render from './Render'
 
 // Variables
-//const $todoAdd = $('.todo_add')
+const $todoAdd = $('.todo_add')
+$todoAdd.on('click', Render)
 // bind events
-$('.todo_add').on('click', () => {
-  console.log('tests')
-})
 
 // it might be said
 // TODOS

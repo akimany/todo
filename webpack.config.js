@@ -7,19 +7,19 @@ module.exports = {
   entry: './js/main.js',
   devtool: 'source-map',
   devServer: {
-    publicPath: '/public/'
+    publicPath: '/public/',
   },
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json'],
   },
   stats: {
     colors: true,
     reasons: true,
-    chunks: false
+    chunks: false,
   },
   module: {
     rules: [
@@ -28,9 +28,11 @@ module.exports = {
         test: /\.js$/,
         loader: 'eslint-loader',
         exclude: /node_modules/,
+      },
+      {
         test: /\.jsx?$/,
-        loader: 'babel-loader'
-      }
-    ]
-  }
+        loader: 'babel-loader',
+      },
+    ],
+  },
 }
