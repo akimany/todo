@@ -1,10 +1,16 @@
 // it might be said:
 import $ from 'jquery'
 import Render from './Render'
+import Remove from './Remove'
 
 // Variables
 const $todoAdd = $('.todo_add')
+const todoCont = document.getElementsByClassName('todo_cont')
+
 $todoAdd.on('click', Render)
+$(todoCont).on('click', '.remove', Remove)
+
+
 // bind events
 
 // it might be said
