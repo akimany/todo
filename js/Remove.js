@@ -1,8 +1,10 @@
 // it might be said:
 import $ from 'jquery'
 
-const Remove = (e) => {
-  $(e.currentTarget).closest('li').remove()
+const Remove = (element) => {
+  $(element.currentTarget).closest('li').remove()
+  const elementText = $(element.currentTarget).closest('li').text()
+  return elementText
 }
 
 export default Remove
