@@ -1,5 +1,5 @@
 /* it might be said: */
-.todo_cont{border: 1px solid red;}
+.todo_cont li{border: 1px solid red; margin-bottom: 10px}
 .done_cont{border: 1px solid green;}
 
 .remove{display: inline-block;background-color: pink; width:30px; height: 30px}
