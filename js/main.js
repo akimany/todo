@@ -3,14 +3,12 @@ import $ from 'jquery'
 import Render from './Render'
 import Remove from './Remove'
 // it might be said:
-// Variables
 const $todoAdd = $('.todo_add')
 const todoCont = document.getElementById('todo_cont')
-todoCont.addEventListener('click', e => {
-  if (e.target && e.target.matches('span.remove')) {
-    Remove(e)
-  }
-})
+const doneCont = document.getElementById('done_cont')
+
+todoCont.addEventListener('click', Remove)
+doneCont.addEventListener('click', Remove)
 
 $todoAdd.on('click', Render)
 
