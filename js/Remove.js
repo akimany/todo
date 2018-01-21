@@ -5,7 +5,7 @@ const doneCont = document.getElementsByClassName('done_cont')[0]
 const todoCont = document.getElementsByClassName('todo_cont')[0]
 
 const Remove = element => {
-  if (element.target && element.target.matches('span.remove')) {
+  if (element.target && element.target.matches('.remove')) {
     const elementParent = element.target.parentNode
     const elementContainer =
       elementParent.parentNode.id === 'todo_cont' ? doneCont : todoCont

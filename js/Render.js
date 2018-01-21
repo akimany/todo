@@ -8,7 +8,10 @@ const Render = () => {
     : 'empty'
   const todoCont = document.getElementsByClassName('todo_cont')[0]
 
-  todoCont.innerHTML += `<li class="todoListItem">${$todoInputVal}<span class="remove octicon octicon-x" aria-hidden="true"></span><i className="material-icons md-48">face</i></li>`
+  todoCont.innerHTML += `<li class="todoListItem">${$todoInputVal}<i class="remove material-icons">remove_circle_outline</i></li>`
+
+  // it adding back to todocont, change to plus
+  // const listIcon =
 }
 
 export default Render

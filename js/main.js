@@ -3,6 +3,7 @@ import $ from 'jquery'
 import Render from './Render'
 import Remove from './Remove'
 // it might be said:
+
 const $todoAdd = $('.todo_add')
 const todoCont = document.getElementById('todo_cont')
 const doneCont = document.getElementById('done_cont')
