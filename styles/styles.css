@@ -1,4 +1,4 @@
 /* it might be said: */
-.todo_cont li, .done_cont li{ margin-bottom: 10px}
+.todo_cont li, .done_cont li{ margin-bottom: 10px; list-style-type: none;}
 
 .remove{display: inline-block;}
