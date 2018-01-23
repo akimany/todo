@@ -1,17 +1,17 @@
 // it might be said:
-import $ from 'jquery'
 import Render from './Render'
 import Remove from './Remove'
 // it might be said:
 
-const $todoAdd = $('.todo_add')
+const todoAdd = document.getElementsByClassName('todo_add')[0]
+
 const todoCont = document.getElementById('todo_cont')
 const doneCont = document.getElementById('done_cont')
 
 todoCont.addEventListener('click', Remove)
 doneCont.addEventListener('click', Remove)
 
-$todoAdd.on('click', Render)
+todoAdd.addEventListener('click', Render)
 
 // bind events
 
