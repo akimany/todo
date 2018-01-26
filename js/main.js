@@ -1,7 +1,6 @@
 // it might be said:
 import Render from './Render'
 import Remove from './Remove'
-// it might be said:
 
 const todoAdd = document.getElementsByClassName('todo_add')[0]
 
