@@ -11,11 +11,12 @@ const LocalStorageWork = () => {
     listName,
   }
 
+  console.log(JSON.parse(localStorage.getItem('todo')))
+
   listObject.todoList = JSON.parse(localStorage.getItem('todo'))
     ? JSON.parse(localStorage.getItem('todo'))
     : localStorage.setItem('todo', JSON.stringify(listObject))
 
-  console.log(listObject, localStorage)
   listObject.todoList.push(JSON.stringify($todoInputVal))
 
   localStorage.setItem('todo', JSON.stringify(listObject))
