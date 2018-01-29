@@ -9,6 +9,8 @@ const Delete = element => {
     const elementContainerSwitch =
       elementParentNode.parentNode.id === 'todo_cont' ? doneCont : todoCont
     elementContainerSwitch.appendChild(elementParentNode) // check if appendChild removes the node too
+  } else if (element.target && element.target.matches('.delete')) {
+    elementParentNode.remove()
   }
 }
 

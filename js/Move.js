@@ -3,11 +3,16 @@ import Delete from './Delete'
 
 const Move = element => {
   Delete(element)
-
   const elementParentNode = element.target.parentNode
-  if (element.target.parentNode.parentNode.id === 'done_cont') {
+  if (
+    elementParentNode.parentNode != null &&
+    elementParentNode.parentNode.id === 'done_cont'
+  ) {
     elementParentNode.firstChild.nextSibling.innerHTML = 'add_circle_outline'
-  } else if (element.target.parentNode.parentNode.id === 'todo_cont') {
+  } else if (
+    elementParentNode.parentNode != null &&
+    elementParentNode.parentNode.id === 'todo_cont'
+  ) {
     elementParentNode.firstChild.nextSibling.innerHTML = 'remove_circle_outline'
   }
 }
