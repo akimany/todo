@@ -2,11 +2,15 @@
 body{
   cursor: pointer;
 }
+ul{
+  padding-left: 0;
+}
 .todo_cont li, .done_cont li{
   margin-bottom: 10px;
   list-style-type: none;
+  margin-left: 0;
 }
 
-.remove{
+.move{
   display: inline-block;
 }
