@@ -1,10 +1,10 @@
 // it might be said:
 
-import $ from 'jquery'
+const todoInput = document.getElementById('main-input')
 
 const ReturnFocus = () => {
-  const $todoInput = $('.todo_input')
-  $todoInput.val('').focus()
+  todoInput.value = ''
+  todoInput.focus()
 }
 
 export default ReturnFocus

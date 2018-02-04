@@ -3,8 +3,15 @@ import $ from 'jquery'
 import LocalStorageWork from './LocalStorageWork'
 
 // it might be said
+// refactor with ES6 classes
+const todoInput = document.getElementById('main-input')
+const error = document.getElementsByClassName('error')[0]
+
 const printError = () => {
-  console.log('print error')
+  if (!todoInput.value) {
+    error.style = 'display: block; color: red'
+    error.innerHTML = 'Enter something into the field'
+  }
 }
 
 const Render = () => {
@@ -12,11 +19,13 @@ const Render = () => {
     ? $('.todo_input').val()
     : printError()
   const todoCont = document.getElementsByClassName('todo_cont')[0]
-
-  todoCont.innerHTML += `<li class="todoListItem">${$todoInputVal}
+  if (todoInput.value) {
+    error.style = 'display: none'
+    todoCont.innerHTML += `<li class="todoListItem">${$todoInputVal}
                             <i class="move material-icons">remove_circle_outline</i>
                             <i class="delete material-icons">delete</i>
                          </li>`
+  }
   LocalStorageWork()
 }
 

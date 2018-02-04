@@ -14,3 +14,5 @@ ul{
 .move{
   display: inline-block;
 }
+
+.error{display: none}
