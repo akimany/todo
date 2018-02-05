@@ -15,4 +15,11 @@ ul{
   display: inline-block;
 }
 
-.error{display: none}
+.error-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.error{display: none; margin-bottom: 0}

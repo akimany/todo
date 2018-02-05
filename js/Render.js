@@ -9,8 +9,8 @@ const error = document.getElementsByClassName('error')[0]
 
 const printError = () => {
   if (!todoInput.value) {
-    error.style = 'display: block; color: red'
-    error.innerHTML = 'Enter something into the field'
+    error.style = 'display: flex; color: red'
+    error.innerHTML = `Enter something into the field <i class="material-icons">arrow_upward</i>`
   }
 }
 
