@@ -1,5 +1,4 @@
 // it might be said:
-import $ from 'jquery'
 import LocalStorageWork from './LocalStorageWork'
 
 // it might be said
@@ -15,15 +14,16 @@ const printError = () => {
 }
 
 const Render = () => {
-  const $todoInputVal = $('.todo_input').val()
-    ? $('.todo_input').val()
+  const todoInputVal = document.getElementsByClassName('todo_input')[0].value
+    ? document.getElementsByClassName('todo_input')[0].value
     : printError()
   const todoCont = document.getElementsByClassName('todo_cont')[0]
   if (todoInput.value) {
     error.style = 'display: none'
-    todoCont.innerHTML += `<li class="todoListItem">${$todoInputVal}
+    todoCont.innerHTML += `<li class="todoListItem">
                             <i class="move material-icons">remove_circle_outline</i>
                             <i class="delete material-icons">delete</i>
+                            ${todoInputVal}
                          </li>`
   }
   LocalStorageWork()
