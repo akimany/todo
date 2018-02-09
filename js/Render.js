@@ -13,7 +13,8 @@ const printError = () => {
   }
 }
 
-const Render = () => {
+const Render = element => {
+  element.preventDefault() // stops page refresh - add button is type submit
   const todoInputVal = document.getElementsByClassName('todo_input')[0].value
     ? document.getElementsByClassName('todo_input')[0].value
     : printError()
