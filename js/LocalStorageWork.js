@@ -1,8 +1,8 @@
 // it might be said:
-// import $ from 'jquery'
 
 const LocalStorageWork = () => {
   // const listName = 'New list' // this should be dynamic, from an input
+  // if other lists are available, option to select and load that list through a select
   // const $todoInputVal = $('.todo_input').val() ? $('.todo_input').val() : 'empty'
   // check if localstorage has a todo object
   // if it does,

@@ -2,7 +2,6 @@
 import LocalStorageWork from './LocalStorageWork'
 
 // it might be said
-// refactor with ES6 classes
 const todoInput = document.getElementById('main-input')
 const error = document.getElementsByClassName('error')[0]
 
