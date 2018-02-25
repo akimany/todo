@@ -1,15 +1,22 @@
 // it might be said:
 const buttonContainer = document.getElementsByClassName('button_container')[0]
+
 const newInput = document.createElement('input')
-newInput.className = 'form-control add_new_list'
+newInput.className = 'form-control add_new_list_val'
 
-const newDiv = document.createElement('div')
-newDiv.className = 'col-12 col-md-9'
+const newButton = document.createElement('button')
+const newButtonTextNode = document.createTextNode('Click to add list')
+newButton.appendChild(newButtonTextNode)
+newButton.className = 'btn btn-primary add_new_list'
 
-newDiv.appendChild(newInput)
+const containerDiv = document.createElement('div')
+containerDiv.className = 'col-12 col-md-9'
+
+containerDiv.appendChild(newInput)
+containerDiv.appendChild(newButton)
 
 const NewList = () => {
-  buttonContainer.appendChild(newDiv)
+  buttonContainer.appendChild(containerDiv)
 }
 
 export default NewList

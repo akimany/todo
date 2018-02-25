@@ -1,5 +1,4 @@
 // it might be said:
-import LocalStorageWork from './LocalStorageWork'
 
 // it might be said
 const todoInput = document.getElementById('main-input')
@@ -7,6 +6,7 @@ const error = document.getElementsByClassName('error')[0]
 
 const printError = () => {
   if (!todoInput.value) {
+    // change the error message - bootstrap class on input and return focus
     error.style = 'display: flex; color: red'
     error.innerHTML = `Enter something into the field <i class="material-icons">arrow_upward</i>`
   }
@@ -26,7 +26,6 @@ const Render = element => {
                             ${todoInputVal}
                          </li>`
   }
-  LocalStorageWork()
 }
 
 export default Render
