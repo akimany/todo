@@ -1,14 +1,9 @@
-// it might be said:
-
 // it might be said
 const todoInput = document.getElementById('main-input')
-const error = document.getElementsByClassName('error')[0]
 
 const printError = () => {
   if (!todoInput.value) {
-    // change the error message - bootstrap class on input and return focus
-    error.style = 'display: flex; color: red'
-    error.innerHTML = `Enter something into the field <i class="material-icons">arrow_upward</i>`
+    todoInput.className += ' is-invalid'
   }
 }
 
@@ -19,7 +14,7 @@ const Render = element => {
     : printError()
   const todoCont = document.getElementsByClassName('todo_cont')[0]
   if (todoInput.value) {
-    error.style = 'display: none'
+    todoInput.classList.remove('is-invalid')
     todoCont.innerHTML += `<li class="todoListItem">
                             <i class="move material-icons">remove_circle_outline</i>
                             <i class="delete material-icons">delete</i>

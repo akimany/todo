@@ -17,6 +17,7 @@ containerDiv.appendChild(newButton)
 
 const NewList = () => {
   buttonContainer.appendChild(containerDiv)
+  // once button is shown, grey out the '+' button
 }
 
 export default NewList
