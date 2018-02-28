@@ -1,8 +1,7 @@
 // it might be said:
-
-todoInput.addEventListener('keypress', () => {
-  console.log('test')
-  // todoInput.classList.contains('is-invalid')) {
-  //    todoInput.classList.remove('is-invalid')
-  //  }
-})
+const RemoveError = event => {
+  if (event.currentTarget.classList.contains('is-invalid')) {
+    event.currentTarget.classList.remove('is-invalid')
+  }
+}
+export default RemoveError
