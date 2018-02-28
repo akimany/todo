@@ -3,10 +3,12 @@ body{
   cursor: pointer;
   background-image:url('./../images/sunset.jpg');
 }
+
 ul{
   padding-left: 0;
 }
-.todo_cont li, .done_cont li{
+
+ul li{
   margin-bottom: 10px;
   list-style-type: none;
   margin-left: 0;
