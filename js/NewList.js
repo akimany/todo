@@ -9,14 +9,18 @@ const newButtonTextNode = document.createTextNode('Click to add list')
 newButton.appendChild(newButtonTextNode)
 newButton.className = 'btn btn-primary add_new_list'
 
-const containerDiv = document.createElement('div')
-containerDiv.className = 'col-12 col-md-9'
+const colDiv = document.createElement('div')
+colDiv.className = 'col-12 col-md-9'
 
-containerDiv.appendChild(newInput)
-containerDiv.appendChild(newButton)
+const rowDiv = document.createElement('div')
+rowDiv.className = 'row'
+
+colDiv.appendChild(rowDiv)
+rowDiv.appendChild(newInput)
+rowDiv.appendChild(newButton)
 
 const NewList = () => {
-  buttonContainer.appendChild(containerDiv)
+  buttonContainer.appendChild(colDiv)
   // once button is shown, grey out the '+' button
 }
 

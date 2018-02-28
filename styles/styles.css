@@ -1,6 +1,7 @@
 /* it might be said: */
 body{
   cursor: pointer;
+  background-image:url('./../images/sunset.jpg');
 }
 ul{
   padding-left: 0;
