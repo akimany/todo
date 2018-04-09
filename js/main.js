@@ -3,7 +3,7 @@ import Render from './Render'
 import Move from './Move'
 import ReturnFocus from './ReturnFocus'
 import NewList from './NewList'
-import LocalStorageWork from './LocalStorageWork'
+import LocalStorageWork from './localStorage/LocalStorageWork'
 import RemoveError from './RemoveError'
 
 const todoAdd = document.getElementsByClassName('todo_add')[0]
