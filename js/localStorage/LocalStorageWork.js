@@ -6,14 +6,28 @@ const LocalStorageWork = () => {
   // const listName = 'New list' // this should be dynamic, from an input
   // const newListVal = newList.value
   // const localStorageArray = []
-
-  Object.keys(localStorage).forEach(element => {
-    console.log(element, localStorage.getItem(element))
+  const localArray = []
+  Object.keys(localStorage).forEach((element, index) => {
+    const newObj = {
+      index,
+      name: element,
+      mainData: JSON.parse(localStorage.getItem(element))
+    }
+    localArray.push(newObj)
   })
 
-  if (localStorage.length > 0) {
-    // console.log(document.getElementsByClassName('todoLists'))
-  }
+  const localListItems = localArray
+    .map(element => {
+      const listItem = document.createElement('option')
+      const textNode = document.createTextNode(element.name)
+      listItem.appendChild(textNode)
+      return listItem
+    })
+    .join()
+
+  console.log(localListItems, document.getElementsByClassName('todoLists'))
+  // next step is to stick the options into a select *****here******
+
   // if other lists are available, option to select and load that list through a select
   // Function to make a select, populated with options from Object keys in localStorage
 
