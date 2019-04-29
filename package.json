@@ -8,14 +8,12 @@
     "test": "eslint js",
     "build": "webpack",
     "lint": "eslint **/*.{js,jsx} --quiet",
-    "format":
-      "prettier --list-different --single-quote --print-width=120 \"js/**/*.{js,jsx}\"",
+    "format": "prettier --list-different --single-quote --print-width=120 \"js/**/*.{js,jsx}\"",
     "watch": "webpack --watch"
   },
   "author": "Aamar Khan",
   "dependencies": {
     "jquery": "^3.2.1",
-    "webpack": "2.6.1",
     "webpack-dev-middleware": "1.10.2"
   },
   "devDependencies": {
@@ -31,6 +29,7 @@
     "eslint": "3.19.0",
     "eslint-plugin-prettier": "2.1.1",
     "prettier": "1.7.0",
+    "webpack": "^2.6.1",
     "webpack-dev-server": "2.4.5"
   }
 }
