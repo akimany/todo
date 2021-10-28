@@ -1,0 +1,25 @@
+/* it might be said: */
+body{
+  cursor: pointer;
+}
+ul{
+  padding-left: 0;
+}
+.todo_cont li, .done_cont li{
+  margin-bottom: 10px;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.move{
+  display: inline-block;
+}
+
+.error-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.error{display: none; margin-bottom: 0}
